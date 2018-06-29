@@ -1,0 +1,361 @@
+/*
+  180518
+  デザイン修正
+  jhkim
+*/
+
+:root {
+  --text-color: #7f7f7f;
+  --light-btn-color: #3f6ac1;
+}
+
+* {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+}
+
+/* Loading div */
+#loading {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  display: block;
+  opacity: 0.7;
+  background-color: #fff;
+  z-index: 99;
+  text-align: center;
+}
+
+#loading-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+}
+
+body {
+  margin-bottom: 5%;
+}
+
+hr {
+  color: var(--light-btn-color);
+  border: 1px solid;
+  left: 0;
+  right: 0;
+}
+
+b {
+  margin-top: 10px;
+  color: var(--text-color);
+  font-size: 1.5em;
+}
+
+th, td {
+  width: 12%;
+  height: 40px;
+  border-bottom: 1px solid var(--text-color);
+  padding: 6px;
+}
+
+button {
+  color: white;
+  font-size: 1em;
+  border: 0px;
+  background-color: var(--light-btn-color);
+}
+
+/* 180627 時間修正リスト追加 */
+#STAllHour, #ETAllHour, #RTAllHour, #STAllMinute, #ETAllMinute, #RTAllMinute {
+  width: 48px;
+  font-size: 1em;
+  -webkit-appearance: menulist-button;
+  height: 30px;
+}
+
+/* 180627 時間修正リスト追加 */
+#YearMonth {
+  font-size: 18px;   /* 180604 20px -> 18px 修正*/
+  width: 200px;
+  /* text-align-last: center;  only use Chrome*/
+  text-indent: 5px;  /* indent */
+  -webkit-appearance: menulist-button;
+}
+
+input {
+  font-size: 1em;
+  width: 3.2em;  /* 180621 2.8em -> 3.2em */
+  text-align: center;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  font-size: 20px;
+}
+
+/* ヘッダー */
+header {
+  position: inherit;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 0.8;
+}
+
+header .container-small {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+}
+
+@media (min-width: 768px) {
+  .buttons-container {
+    display: flex; /* 横に並ぶ */
+    justify-content: space-between; /* 右左整列 */
+  	max-width: 1000px;
+  	margin-left: auto;
+  	margin-right: auto;
+  }
+
+  table {
+    color: black;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-collapse: collapse;
+  }
+
+  .timeSheet-all {
+    margin-top: 4%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  /* 20180621 総残業時間追加 */
+  .timeSheet-top {
+    display: flex; /* 横に並ぶ */
+    justify-content: space-between; /* 右左整列 */
+    margin-bottom: -10px;
+  }
+
+  .title {
+    margin-top: 12px;
+    vertical-align: middle;
+  }
+
+  .alloverwork {
+    display: flex; /* 横に並ぶ */
+  }
+  /* 20180621 総残業時間追加 end */
+}
+
+.timeSheet-form {
+  margin-top: 20px;
+}
+
+.headA ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.headA a {
+  display: block;
+  padding: 15px;
+  color: inherit;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.headA a:hover {
+  background-color: rgba(255, 250, 250, 0.4);
+}
+
+.headA {
+  background: black;
+  color: white;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 200px;
+  height: 1000px;
+  text-align: center;
+  display: none;
+}
+
+/* 180618 修正*/
+.headB {
+  color: white;
+  /* margin-left: 5px;
+  margin-right: 10px;
+  padding: 10px; */
+  margin-right: 2px;
+  width: 54px;
+  height: 53px;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.headB:hover {
+  opacity: 0.3;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  width: 100%;
+}
+
+.select-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.button-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.search-btn {
+  cursor: pointer;
+  background-color: var(--text-color);
+  height: 34px;
+  width: 82px;
+  border: 0px; /* 180611 修正 */
+}
+
+.download-btn, .modify-btn, .input-btn{
+  margin-left: 2px;
+  color: white;
+  background-color: var(--light-btn-color);
+  height: 34px;
+  width: 82px;
+  border: 0px; /* 180611 修正 */
+}
+
+.note-btn {
+  color: white;
+  background-color: var(--light-btn-color);
+  height: 40px;
+  width: 85px;
+  text-align: center;
+  border: 0px; /* 180611 修正 */
+}
+
+.small-cell {
+  width: 6%;
+}
+
+/* 180612追加 モバイル画面 */
+@media (max-width: 767px) {
+  table {
+    color: black;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-collapse: collapse;
+  }
+
+  /* ヘッダー */
+  header {
+    position: inherit;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0.8;
+  }
+
+  header .container-small {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+  }
+
+  .headA ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  /* メニュー Font */
+  .headA a {
+    display: block;
+    padding: 20px;
+    color: inherit;
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+  .headA a:hover {
+    background-color: rgba(255, 250, 250, 0.4);
+  }
+
+  .headA {
+    background: black;
+    color: white;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 250px;
+    height: 1000px;
+    text-align: center;
+    display: none;
+  }
+
+  /* メニューハンバーガーメボタン */
+  .headB {
+    color: white;
+    margin-left: 5px;
+    margin-right: 10px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .headB:hover {
+    opacity: 0.3;
+  }
+  /* ヘッダー終了 */
+
+  .timeSheet-all {
+    margin-top: 4%;
+  }
+
+  .buttons-container {
+    display: flex; /* 横に並ぶ */
+    justify-content: space-between; /* 右左整列 */
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 20180622 総残業時間追加(モバイル) */
+  .timeSheet-top {
+    text-align: center;
+    margin-bottom: -10px;
+  }
+
+  .alloverwork {
+    height: 90%;
+    width: 100%;
+    text-align: center;
+    display: table;
+  }
+  /* 20180622 総残業時間追加(モバイル) end */
+
+  .select-form {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+  }
+}

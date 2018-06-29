@@ -1,0 +1,216 @@
+*:not(.headA)  {
+  margin: 0 auto;
+}
+html {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+}
+@charset "UTF-8";
+:root {
+  --mainText-color: #ffffff;
+  --btn-color: #3f6ac1;
+  --td-color:#ffffff;
+  --light-btn-color: #00baff;
+  --box-color:#434446;
+  --th-color:#ffffff;
+  --field-color:gray;
+}
+
+body {
+ background:url('../../image/pts/register.png') no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.sectionB {
+  position: relative;
+/*
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+*/
+z-index: 2;
+}
+
+.shadow {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+}
+
+.sectionB .register h3 {
+  text-align: center;
+  font-size: 23px;
+  color: var(--mainText-color);
+}
+
+.sectionB .register .table {
+  border-spacing: 4px 4px;
+  padding: 10px 20px 20px 20px;
+  background-color: var(--box-color);
+  background-color: rgba( 67, 68, 70, 0.8);
+  /* border-radius: 10px; */
+}
+
+.sectionB .register .th {
+  text-align: left;
+  width: 120px;
+  height: 20px;
+  color: var(--th-color);
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 0;
+}
+
+.sectionB .register .td {
+  width: 200px;
+  padding: 0;
+  font-size: 13px;
+  color: var(--td-color);
+  height: 35px;
+}
+
+
+.sectionB .register .td input, .sectionB .register .td select {
+  width: 100%;
+  border: 0;
+  text-indent: 10px;
+  height: 30px;
+  padding: 0;
+  font-size: 13px;
+}
+
+#email, #birthday, #user_id, #department {
+  color:var(--field-color);
+}
+
+#password {
+  font-size: 10px;
+}
+
+#password:hover {
+  text-decoration: underline;
+  font-size: 10px;
+}
+
+.sectionB .register .td input:focus {
+  outline: none;
+}
+
+select option:checked, select option:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: red;
+}
+
+#rest_time {
+  width: 200px;
+  text-align: center;
+}
+
+#start_time {
+  width: 200px;
+  text-align: center;
+  border:green solid 1px;
+}
+
+#end_time {
+  width: 200px;
+  text-align: center;
+}
+
+.cancle {
+  width: 100%;
+  font-size: 13px;
+  height: 30px;
+  margin: 7px 0 0 0;
+  letter-spacing: 5px;
+  background-color: var(--btn-color);
+  color:var(--th-color);
+  border:none;
+}
+
+.update {
+  width: 100%;
+  font-size: 13px;
+  height: 30px;
+  margin: 7px 0 0 0;
+  background-color: var(--btn-color);
+  color:var(--th-color);
+  border:none;
+}
+
+#error {
+  height: 15px;
+  color: red;
+  font-size: 8px;
+}
+
+#notice {
+  height: 15px;
+  color: white;
+  font-size: 10px;
+}
+
+.sectionB .register .fix, .sectionB .register .create {
+  display: inline-block;
+  text-align: center;
+  width: 182px;
+}
+
+.sectionB .register .fix input, .sectionB .register .create input {
+  /* bottom: 60px; */
+  display: block;
+  background-color: #f79721;
+  /* position: absolute; */
+  padding: 0;
+  width: 182px;
+}
+
+/*上はスマホ画面*/
+
+@media(min-width:376px) {
+  /*下はパソコン画面*/
+  #start_time {
+    width: 44%;
+      margin-right: 1px;
+
+  }
+  #end_time {
+    width: 44%;
+    margin-left: 1px;
+  }
+  .button {
+
+    display: inline-flex;
+    text-align: center;
+  }
+  .cancle {
+margin-top: 15px;
+margin-left: 10px;
+    width: 45%;
+    padding: 0;
+    height: 30px;
+    font-size: 15px;
+    background-color: var(--btn-color);
+    border: none;
+  }
+  .update {
+    margin-right: 10px;
+    width: 45%;
+    padding: 0;
+    height: 30px;
+    font-size: 15px;
+    background-color: var(--btn-color);
+    border: none;
+  }
+  .sectionB .register .table {
+    margin-top: 50px;
+    padding: 10px 20px 20px 20px;
+  }
+  #rest_time {
+    text-align: center;
+  }
+}
